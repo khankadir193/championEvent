@@ -1,0 +1,83 @@
+.scratch-item{
+    width: 80%;
+    height: 9vw;
+    background-image: url('../assets/images/lucky/number-bar.png');
+    display: flex;
+    align-items: center;
+
+    gap: 25vw;
+    padding: 2vw;
+    position: relative;
+
+    .index{
+        background-color: #0f0c30;
+        padding: 1vw 2vw;
+        font-size: 2vw;
+        font-family: 'PoppinsMediumItalic';
+        color: white;
+        border-radius: 1vw;
+        position: relative;
+        left: 6vw;
+    }
+
+    .revealed-number{
+        font-family: 'PoppinsMediumItalic';
+        color: white;
+        font-size: 3vw;
+        position: absolute;
+        left: 24vw;
+        top: 1vw;
+        display: flex;
+        justify-content: center;
+        gap: 1vw;
+        font-style: alic;
+        align-items: center;
+    }
+}
+
+.scratch-win-item{
+    width: 80%;
+    height: 14vw;
+    background-image: url('../assets/images/lucky/lucky-number-winner-bar.png');
+    display: flex;
+    align-items: center;
+
+    position: relative;
+
+    gap: 25vw;
+    padding: 2vw;
+
+    .index{
+    background-color: #0f0c30;
+    padding: 1vw 2vw;
+    font-size: 2vw;
+    font-family: 'PoppinsMediumItalic';
+    color: white;
+    border-radius: 1vw;
+    position: absolute;
+    left: 9vw;
+    top: 4vw;
+    }
+
+    .revealed-number{
+        font-family: 'PoppinsMediumItalic';
+        color: white;
+        font-size: 3vw;
+        position: absolute;
+        left: 23vw;
+        top: 4vw;
+        display: flex;
+        justify-content: center;
+        gap: 1vw;
+        font-style: alic;
+        align-items: center;
+    }
+
+    .win-label{
+        width: 12vw;
+        position: absolute;
+        right: 8vw;
+        top: 1vw;
+    }
+    }
+

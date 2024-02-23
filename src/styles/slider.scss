@@ -1,0 +1,361 @@
+.slider2 {
+  width: 90%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  //   background-image: url("../assets/images/rewards-bg.png");
+  //   height: 55vw;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  position: relative;
+
+  .rewards-text {
+    width: 30vw;
+    position: absolute;
+    top: 2vw;
+  }
+
+  .left-arrow {
+    width: 9vw;
+  }
+  .right-arrow {
+    width: 9vw;
+  }
+
+  .slider-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    gap: 1vw;
+
+    .rank-text {
+      font-family: "EvilEmpire";
+      font-size: 5vw;
+    }
+
+    .rew-container {
+      display: flex;
+      justify-content: center;
+      width: 60vw;
+      // border: 2px solid;
+      .reward-item {
+        display: flex;
+        flex-direction: column;
+        width: 46vw;
+        height: 52vw;
+        background-image: url("../assets/images/battle/reward-bg.png");
+        background-size: 100% 100%;
+
+        align-items: center;
+
+        .reward-img {
+          width: 20vw;
+          position: relative;
+          top: 11vw;
+        }
+
+        p {
+          position: relative;
+          top: 11vw;
+          font-size: 2.6vw;
+        }
+      }
+    }
+  }
+
+  .indicators {
+    display: flex;
+    gap: 1vw;
+    // margin-top: 4vw;
+    position: relative;
+    top: -2vw;
+    .slider-dot {
+      width: 2vw;
+      height: 2vw;
+      border-radius: 100%;
+      // border: 0.2vw solid yellow;
+      background-color: gray;
+    }
+    .active-dot {
+      background-color: white !important;
+    }
+  }
+}
+
+.tour-slider {
+  width: 90%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  //   background-image: url("../assets/images/rewards-bg.png");
+  //   height: 55vw;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  position: relative;
+
+  .rewards-text {
+    width: 30vw;
+    position: absolute;
+    top: 2vw;
+  }
+
+  .left-arrow {
+    width: 9vw;
+    height: 9vw;
+    background-image: url("../assets/images/battle/left-arrow.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+  .right-arrow {
+    width: 9vw;
+    height: 9vw;
+    background-image: url("../assets/images/battle/left-arrow.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    transform: scaleX(-1);
+  }
+
+  .slider-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    gap: 1vw;
+
+    .rew-container {
+      display: flex;
+      justify-content: center;
+      width: 60vw;
+      // border: 2px solid;
+      .reward-item {
+        display: flex;
+        flex-direction: column;
+        width: 46vw;
+        height: 52vw;
+        background-image: url("../assets/images/tour/planet-bg.png");
+        background-size: 100% 100%;
+
+        align-items: center;
+
+        position: relative;
+
+        .reward-image {
+          width: 20vw;
+          position: absolute;
+          top: 17vw;
+        }
+
+        p {
+          position: absolute;
+          top: 52vw;
+          font-size: 6.6vw;
+          font-family: "EvilEmpire";
+        }
+      }
+    }
+  }
+
+  .indicators {
+    display: flex;
+    gap: 1vw;
+    margin-top: 4vw;
+    .slider-dot {
+      width: 2vw;
+      height: 2vw;
+      border-radius: 100%;
+      border: 0.2vw solid yellow;
+      background-color: brown;
+    }
+    .active-dot {
+      background-color: gold !important;
+    }
+  }
+}
+
+.gift-slider {
+  width: 90%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  position: relative;
+  flex-direction: column;
+
+  .arrowsNRank {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    .left-arrow {
+      width: 9vw;
+    }
+    .right-arrow {
+      width: 9vw;
+    }
+
+    .rank {
+      font-size: 6vw;
+      font-family: "EvilEmpire";
+      color: white;
+    }
+  }
+  .rews-content {
+    display: flex;
+    // flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 79vw;
+    background-image: url("../assets/images/event-gifting/reward-bg.png");
+
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+
+    .target-text {
+      position: absolute !important;
+      top: 16vw !important;
+    }
+    .reward-item {
+      display: flex;
+      flex-direction: column;
+      width: 25vw;
+      height: 29vw;
+      background-image: url("../assets/images/event-gifting/reward-box.png");
+      background-size: 100% 100%;
+
+      align-items: center;
+
+      .reward-img {
+        width: 14vw;
+        position: relative;
+        top: 7vw;
+      }
+
+      .gift-rew-desc {
+        position: relative;
+        top: 14vw;
+        font-size: 2.6vw;
+      }
+    }
+  }
+
+  .indicators {
+    display: flex;
+    gap: 1vw;
+    // margin-top: 4vw;
+    position: relative;
+    top: -2vw;
+    .slider-dot {
+      width: 2vw;
+      height: 2vw;
+      border-radius: 100%;
+      // border: 0.2vw solid yellow;
+      background-color: gray;
+    }
+    .active-dot {
+      background-color: white !important;
+    }
+  }
+}
+
+.game-slider {
+  width: 90%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  //   background-image: url("../assets/images/rewards-bg.png");
+  //   height: 55vw;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  position: relative;
+
+  .rewards-text {
+    width: 30vw;
+    position: absolute;
+    top: 2vw;
+  }
+
+  .left-arrow {
+    width: 9vw;
+  }
+  .right-arrow {
+    width: 9vw;
+  }
+
+  .slider-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    gap: 1vw;
+
+    .rank-text {
+      font-family: "EvilEmpire";
+      font-size: 5vw;
+    }
+
+    .rew-container {
+      display: flex;
+      justify-content: center;
+      width: 60vw;
+      // border: 2px solid;
+      .reward-item {
+        display: flex;
+        flex-direction: column;
+        width: 23vw;
+        height: 22vw;
+        background-image: url("../assets/images/battle/reward-bg.png");
+        background-size: 100% 100%;
+
+        align-items: center;
+
+        .reward-img {
+          width: 10vw;
+          position: relative;
+          top: 4vw;
+        }
+
+        p {
+          position: relative;
+          top: 11vw;
+          font-size: 2vw;
+          width: 17vw;
+        }
+      }
+    }
+  }
+
+  .indicators {
+    display: flex;
+    gap: 1vw;
+    // margin-top: 4vw;
+    position: relative;
+    top: 10vw;
+    .slider-dot {
+      width: 2vw;
+      height: 2vw;
+      border-radius: 100%;
+      // border: 0.2vw solid yellow;
+      background-color: gray;
+    }
+    .active-dot {
+      background-color: white !important;
+    }
+  }
+}

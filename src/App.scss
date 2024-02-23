@@ -1,0 +1,57 @@
+.App {
+  text-align: center;
+  background-image: url("../src/assets/images/battle/bg.png");
+  background-size: cover;
+  padding-bottom: 4vw;
+
+  .guideNGifting {
+    top: 87vw;
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+  }
+
+  .main-tabs {
+    width: 90%;
+    height: 10vw;
+    background-image: url("./assets/images/battle/tab-bar-with-text.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin: 0 auto;
+    display: flex;
+
+    position: relative;
+    top: 6vw;
+    z-index: 2;
+
+    .main-tab-button {
+      background-image: url("./assets/images/battle/active-tab.png");
+
+      width: 31vw;
+      height: 17vw;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      font-family: "EvilEmpire";
+      color: white;
+      font-size: 4vw;
+      position: relative;
+
+      top: -4vw;
+      // left: -3vw;
+    }
+  }
+  .guide-btn-wrap {
+    width: 22vw;
+    position: fixed;
+    left: 0vw;
+    top: 80vw;
+    z-index: 3;
+  }
+  .event-gifting-wrap {
+    width: 22vw;
+    position: fixed;
+    right: 5vw;
+    top: 80vw;
+    z-index: 3;
+  }
+}

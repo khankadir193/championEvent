@@ -1,0 +1,336 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+@font-face {
+  font-family: "EvilEmpire";
+  src: local("EvilEmpire"),
+    url("./assets/fonts/Evil\ Empire.otf") format("truetype");
+}
+@font-face {
+  font-family: "PoppinsMedium";
+  src: local("PoppinsMedium"),
+    url("./assets/fonts/Poppins-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "PoppinsMediumItalic";
+  src: local("PoppinsMediumItalic"),
+    url("./assets/fonts/Poppins-MediumItalic.ttf") format("truetype");
+}
+
+.tab-button {
+  width: 29vw;
+  height: 14vw;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+button {
+  background: transparent;
+  border: none;
+  outline: none;
+  box-shadow: none !important;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* .grayScaled {
+  filter: grayscale(1);
+  background-image: url("./logo.svg");
+} */
+.d-flex {
+  display: flex;
+}
+.j-center {
+  justify-content: center;
+}
+.al-center {
+  align-items: center;
+}
+.j-sa {
+  justify-content: space-around;
+}
+.j-sb {
+  justify-content: space-between;
+}
+.f-column {
+  flex-direction: column;
+}
+button {
+  background: transparent;
+  border: none;
+  outline: none;
+  box-shadow: none !important;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.switch-key {
+  background: transparent;
+  border: none;
+  outline: none;
+  box-shadow: none !important;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.hide {
+  /* visibility: hidden; */
+  opacity: 0;
+}
+.show {
+  visibility: visible;
+}
+
+.blackBg {
+  background-color: black;
+}
+
+.guide {
+  background-image: url("./assets/images/battle/guide-btn.png");
+}
+.event-gifting-btn {
+  background-image: url("./assets/images/battle/event-gifting-btn.png");
+}
+.playBtn {
+  background-image: url("../src/assets/images/battle/play-btn.png");
+  position: relative;
+  top: 21vw;
+}
+.records {
+  background-image: url(./assets/images//battle/record-btn.png);
+}
+.details {
+  background-image: url(./assets/images/battle/detail-btn.png);
+}
+
+.scratch {
+  background-image: url(./assets/images/lucky/scratch-btn.png);
+}
+
+.flip {
+  transform: scaleX(-1);
+}
+
+.rank-bg {
+  width: 16vw;
+  height: 5vw;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.center {
+  text-align: center;
+}
+
+.rights {
+  text-align: center;
+  color: white;
+  position: relative;
+  font-size: 4.7vw;
+  font-family: "EvilEmpire";
+  margin-top: 2vw;
+}
+
+.p-rel {
+  position: relative;
+}
+.yellow {
+  color: yellow;
+}
+
+.highlight {
+  background-color: yellow;
+  color: black;
+  padding: 0.2vw;
+  margin-right: 1vw;
+  margin-left: 1vw;
+}
+.blackNWhite {
+  filter: grayscale(1);
+}
+.forever {
+  /* background-image: url('./assets/images/diwali-dhamka/diwali-forever.gif'); */
+}
+.small-reward {
+  /* background-image: url('./assets/images/diwali-dhamka/small-rewards.gif'); */
+}
+.max-reward {
+  /* background-image: url('./assets/images/diwali-dhamka/max-rewards.gif'); */
+}
+
+.scroll-btn {
+  background-image: url("./assets/images/common/scroll-btn.png");
+  width: 10vw;
+  height: 9vw;
+  background-size: 100% 100%;
+  border: none;
+}
+
+.m-auto {
+  margin: 0 auto;
+}
+.w-100 {
+  width: 100%;
+}
+.h-100 {
+  height: 100%;
+}
+.today-sel {
+  background-image: url("./assets//images/battle/today-btn.png");
+}
+.prev-sel {
+  background-image: url("./assets//images/battle/previous-day-btn.png");
+}
+
+.see-more {
+  background-image: url("./assets/images//battle/see-more-btn.png");
+}
+.see-less {
+  background-image: url("./assets/images//battle/see-less.png");
+}
+.scroll {
+  overflow-y: scroll !important;
+}
+
+.image-bg-100 {
+  background-size: 100% 100%;
+}
+.no-repeat {
+  background-repeat: no-repeat;
+}
+
+.talent {
+  background-image: url(./assets/images/event-gifting/talent.png);
+}
+.gifter {
+  background-image: url(./assets/images/event-gifting/gifter.png);
+}
+
+.rps {
+  background-image: url(./assets/images//guide/rps.png);
+}
+.lucky-player-acc {
+  background-image: url(./assets/images//guide/lucky-player.png);
+}
+.talent-tour {
+  background-image: url(./assets/images//guide/talent-tour.png);
+}
+.event-gifting {
+  background-image: url(./assets/images//guide/event-gifting.png);
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.golden-text {
+  background: linear-gradient(to bottom, #fff2c7, #c88742);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+::-webkit-scrollbar {
+  width: 1vw;
+  background-color: gray;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 1vw;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: white;
+  border-radius: 2vw;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000;
+}
+
+.toast-message {
+  position: fixed !important;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 999;
+  overflow-y: scroll;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.toast-message .content {
+  color: white;
+  background-color: #9a8718;
+  border-radius: 3vw;
+  width: 90%;
+  height: 50vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-size: 5vw;
+}
+.modal-close {
+  position: absolute;
+  top: 60vw;
+  right: 0vw;
+  left: 0;
+}
+.modal-close img {
+  width: 20vw;
+}
+
+.stars-svga {
+  overflow: hidden;
+  width: 64vw;
+  height: 40vw;
+  text-align: left;
+  position: absolute;
+  /* border: 1px solid; */
+  /* left: -11vw; */
+  overflow-x: hidden;
+}
+
+#extraContent {
+  height: 0px;
+  width: 0px;
+  position: absolute;
+  z-index: -2147483648;
+  content: url("./assets/images/battle/rockWin.png")
+    url("./assets/images/battle/rockLost.png")
+    url("./assets/images/battle/rockTie.png")
+    url("./assets/images/battle/paperWin.png")
+    url("./assets/images/battle/paperLost.png")
+    url("./assets/images/battle/papertie.png")
+    url("./assets/images/battle/scissorsWin.png")
+    url("./assets/images/battle/scissorsLost.png")
+    url("./assets/images/battle/scissorsTie.png");
+
+  visibility: hidden;
+  top: 0px;
+}
+.colorFull{
+  filter: grayscale(0);
+
+}

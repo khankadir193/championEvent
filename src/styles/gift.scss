@@ -1,0 +1,88 @@
+.gift {
+  width: 24vw;
+  height: 20vw;
+  background-image: url(../assets//images/lucky/reward-box.png);
+  background-size: 100% 100%;
+  position: relative;
+
+  .gift-img {
+    position: absolute;
+    width: 10vw;
+    top: 4vw;
+    left: 6vw;
+  }
+
+  .priceNText {
+    // left: 1vw;
+    // border: 1px solid;
+    width: 20vw;
+    position: absolute;
+    font-size: 2.5vw;
+    color: white;
+    top: 19vw;
+    font-family: "PoppinsMedium";
+    .name {
+      font-size: 2.8vw;
+    }
+    .price {
+      .price-text {
+        font-size: 2.5vw;
+      }
+      .bean-img {
+        width: 4vw;
+      }
+    }
+  }
+}
+
+.game-reward-item {
+  width: 24vw;
+  height: 26vw;
+  background-image: url(../assets//images/lucky/reward-box.png);
+  background-size: 100% 100%;
+  position: relative;
+
+  .reward-img {
+    position: absolute;
+    width: 12vw;
+    top: 7vw;
+    left: 6vw;
+  }
+
+  .text {
+    left: 1vw;
+    // border: 1px solid;
+    width: 20vw;
+    position: absolute;
+    font-size: 2.5vw;
+    color: white;
+    top: 24vw;
+    font-family: "PoppinsMedium";
+  }
+}
+
+.game-reward-item-mul {
+  width: 17vw;
+  height: 17vw;
+  background-image: url(../assets//images/lucky/reward-box.png);
+  background-size: 100% 100%;
+  position: relative;
+
+  .reward-img {
+    position: absolute;
+    width: 8vw;
+    top: 4vw;
+    left: 5vw;
+  }
+
+  .text {
+    left: 1vw;
+    // border: 1px solid;
+    width: 20vw;
+    position: absolute;
+    font-size: 2.5vw;
+    color: white;
+    top: 24vw;
+    font-family: "PoppinsMedium";
+  }
+}
