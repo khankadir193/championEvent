@@ -111,18 +111,12 @@ const LuckyPlayer = () => {
   };
 
   const toggleTabs = (name) => {
-    if (name === "today") {
-      setLbTabs({
-        today: true,
-        prev: false,
-      });
-    } else {
-      setLbTabs({
-        today: false,
-        prev: true,
-      });
-    }
+    setLbTabs({
+      today: name === "today",
+      prev: name === "prev",
+    });
   };
+  
 
   useEffect(() => {
     if (numberTabs.today) setCurrentLuckyTickets(todayLuckyTickets);
