@@ -89,10 +89,6 @@ export const DataProvider = ({ children }) => {
   }, []);
 
   useEffect(() => {
-    // getInfo();
-    // getBattleRecords();
-    // getScratchRecords();
-    // getTourRecords();
     getBattleLbData();
     getBattleLbDataPrev();
     getLastLuckyWinners();
@@ -177,46 +173,36 @@ export const DataProvider = ({ children }) => {
       });
   };
 
-  const getInfo = () => {
-    fetch(`${baseUrl}/api/activity/rps/getUserEventInfo?userId=${user.userId}`)
-      .then((response) =>
-        response.json().then((response) => {
-          // debugger;
-          // setToast(true);
-          if (response.errorCode === 30000001) {
-            setToast(true);
-          } else {
-            setInfo({
-              ...info,
-              gamePoints: response?.data?.gamePoints,
-              // gamePoints: 0,
 
-              battlesCount: response?.data?.battlesCount,
-              potInfo: response?.data?.potInfo,
-              lastLuckyCard: response?.data?.lastLuckyNumber,
-              // lastLuckyCard: "12345",
+  const getInfo = async () => {
+    try {
+      const response = await fetch(`${baseUrl}/api/activity/rps/getUserEventInfo?userId=${user.userId}`);
+      const data = await response.json();
 
-              dailyScratchRemaining: response?.data?.dailyScratchRemaining,
-              saturnUnlockRewardInfoList:
-                response?.data?.saturnUnlockRewardInfoList,
-              neptuneUnlockRewardInfoList:
-                response?.data?.neptuneUnlockRewardInfoList,
-              travelPlanetIndex: response?.data?.travelPlanetIndex,
-              todayLuckyTickets: response?.data?.todayLuckyTickets,
-              yestLuckyTickets: response?.data?.yesterdayLuckyTickets,
-              // todayLuckyTickets: [],
-              // yestLuckyTickets: [],
-              talentPoints: Math.floor(response?.data?.talentPoints / 20000),
-              travelPlanetIndex: response?.data?.travelPlanetIndex,
-              avatar: response?.data?.portrait,
-            });
-            handleInfoCalled(true);
-          }
-        })
-      )
-      .catch((error) => {
+      if (data.errorCode === 30000001) {
         setToast(true);
-      });
+      } else {
+        setInfo({
+          ...info,
+          gamePoints: data?.data?.gamePoints,
+          battlesCount: data?.data?.battlesCount,
+          potInfo: data?.data?.potInfo,
+          lastLuckyCard: data?.data?.lastLuckyNumber,
+          dailyScratchRemaining: data?.data?.dailyScratchRemaining,
+          saturnUnlockRewardInfoList: data?.data?.saturnUnlockRewardInfoList,
+          neptuneUnlockRewardInfoList: data?.data?.neptuneUnlockRewardInfoList,
+          travelPlanetIndex: data?.data?.travelPlanetIndex,
+          todayLuckyTickets: data?.data?.todayLuckyTickets,
+          yestLuckyTickets: data?.data?.yesterdayLuckyTickets,
+          talentPoints: Math.floor(data?.data?.talentPoints / 20000),
+          travelPlanetIndex: data?.data?.travelPlanetIndex,
+          avatar: data?.data?.portrait,
+        });
+        handleInfoCalled(true);
+      }
+    } catch (error) {
+      setToast(true);
+    }
   };
 
   const getBattleRecords = () => {

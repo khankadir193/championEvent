@@ -94,13 +94,10 @@ function App() {
       </div>
 
 
-      {mainTabs.battle ? (
-        <BattleTab />
-      ) : mainTabs.luckyPlayer ? (
-        <LuckyPlayer />
-      ) : (
-        <TalentTour />
-      )}
+      {mainTabs.battle ? <BattleTab /> :
+        mainTabs.luckyPlayer ? <LuckyPlayer /> :
+          <TalentTour />}
+
       <p className="rights golden-text">All rights reserved by streamkar</p>
 
       <ScrollToTopButton />

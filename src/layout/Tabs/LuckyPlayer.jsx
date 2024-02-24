@@ -102,18 +102,12 @@ const LuckyPlayer = () => {
       scrollToTop();
     }
   }, [seeMore]);
+
   const toggleNumberTabs = (name) => {
-    if (name === "today") {
-      setNumberTabs({
-        today: true,
-        prev: false,
-      });
-    } else {
-      setNumberTabs({
-        today: false,
-        prev: true,
-      });
-    }
+    setNumberTabs({
+      today: name === "today",
+      prev: name === "prev",
+    });
   };
 
   const toggleTabs = (name) => {
