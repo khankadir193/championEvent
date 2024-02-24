@@ -39,49 +39,60 @@ function App() {
     <div className="App">
       <Header />
 
-      <div className="guide-btn-wrap">
-        <CommonButton
-          btnImg="guide"
-          width="21vw"
-          handleClick={toggleGuide}
-        />
-      </div>
-      <div className="event-gifting-wrap">
-        <CommonButton
-          btnImg="event-gifting-btn"
-          width="27vw"
-          handleClick={toggleEventGifitng}
-        />
+      <div>
+        {/* Render the first CommonButton component for the guide */}
+        <div className="guide-btn-wrap">
+          <CommonButton
+            btnImg="guide" // Specify the btnImg prop for the guide button
+            width="21vw" // Set the width of the button
+            handleClick={toggleGuide} // Pass the toggleGuide function as the handleClick prop
+          />
+        </div>
+
+        {/* Render the second CommonButton component for event gifting */}
+        <div className="event-gifting-wrap">
+          <CommonButton
+            btnImg="event-gifting-btn" // Specify the btnImg prop for the event gifting button
+            width="27vw" // Set the width of the button
+            handleClick={toggleEventGifitng} // Pass the toggleEventGifitng function as the handleClick prop
+          />
+        </div>
       </div>
 
       <div>
         <div className="main-tabs">
+          {/* Lucky Player tab button */}
           <button
-            className={`main-tab-button ${!mainTabs.luckyPlayer && "hide"}`}
-            onClick={() => toggleMainTabs("lucky-player")}
-            style={{ left: "2vw" }}
-            disabled={disableAll}
+            className={`main-tab-button ${!mainTabs.luckyPlayer && "hide"}`} // Apply hide class if luckyPlayer tab is not active
+            onClick={() => toggleMainTabs("lucky-player")} // Handle click event to toggle to lucky-player tab
+            style={{ left: "2vw" }} // Set left position style
+            disabled={disableAll} // Disable button if disableAll is true
           >
             LUCKY PLAYER
           </button>
+
+          {/* RPS Champs tab button */}
           <button
-            className={`main-tab-button ${!mainTabs.battle && "hide"}`}
-            onClick={() => toggleMainTabs("battle")}
-            style={{ left: "-0vw" }}
-            disabled={disableAll}
+            className={`main-tab-button ${!mainTabs.battle && "hide"}`} // Apply hide class if battle tab is not active
+            onClick={() => toggleMainTabs("battle")} // Handle click event to toggle to battle tab
+            style={{ left: "-0vw" }} // Set left position style
+            disabled={disableAll} // Disable button if disableAll is true
           >
             RPS CHAMPS
           </button>
+
+          {/* Talent Tour tab button */}
           <button
-            className={`main-tab-button ${!mainTabs.talentTour && "hide"}`}
-            onClick={() => toggleMainTabs("talent-tour")}
-            style={{ left: "3vw" }}
-            disabled={disableAll}
+            className={`main-tab-button ${!mainTabs.talentTour && "hide"}`} // Apply hide class if talentTour tab is not active
+            onClick={() => toggleMainTabs("talent-tour")} // Handle click event to toggle to talent-tour tab
+            style={{ left: "3vw" }} // Set left position style
+            disabled={disableAll} // Disable button if disableAll is true
           >
             TALENT TOUR
           </button>
         </div>
       </div>
+
 
       {mainTabs.battle ? (
         <BattleTab />
