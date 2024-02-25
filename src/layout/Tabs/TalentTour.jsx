@@ -638,31 +638,26 @@ const TalentTour = () => {
           </div>
         )}
       </div>
+
+      {/* leaderboard section code */}
       <div className="tour-lb">
+        {/* title image of leaderboard */}
         <img src={lbTitle} className="title" />
-        <div
-          className={`lb-restWinners  ${seeMore === false ? "scroll" : ""}`}
-          ref={divRef}
-        >
+
+        {/* row data of the leaderboard */}
+        <div className={`lb-restWinners ${seeMore === false ? "scroll" : ""}`} ref={divRef}>
           {talentTourLbData?.length ? (
-            talentTourLbData?.map((item, index) => (
-              <LastWinnerLbItem item={item} index={index + 1} isTalent={true} />
+            talentTourLbData.map((item, index) => (
+              <LastWinnerLbItem key={index} item={item} index={index + 1} isTalent={true} />
             ))
           ) : (
-            <div
-              style={{
-                position: "relative",
-                color: "white",
-                fontFamily: "PoppinsMedium",
-                position: "relative",
-                top: "10vw",
-              }}
-            >
+            <div className="no-data-message">
               No Data Found
             </div>
           )}
         </div>
-        {talentTourLbData?.length > 10 ? (
+        {/* see more if leaderboard data is more than 10 */}
+        {talentTourLbData?.length > 10 && (
           <div className="seeMore">
             <CommonButton
               btnImg={seeMore ? "see-more" : "see-less"}
@@ -670,8 +665,6 @@ const TalentTour = () => {
               handleClick={toggleSeeMore}
             />
           </div>
-        ) : (
-          ""
         )}
       </div>
       {records && <TalentRecords clickHandler={toggleRecords} />}
