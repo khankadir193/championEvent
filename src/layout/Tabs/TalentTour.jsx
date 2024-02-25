@@ -256,214 +256,96 @@ const TalentTour = () => {
         </div>
         {selectedPlanet === 1 ? (
           <div className="sat-game-sec">
-            <p>1 Spaceship Ticket Required for each Travel</p>
+            <p>1 Spaceship Ticket Required for each Travel abdul kadir khan</p>
             <div className="game-bg">
               <div className="game-rewards">
+                {/* left reward code */}
+
                 <div className="left-rewards">
+                  {/* Reward components */}
                   <div className="reward10">
                     <TourComponent
                       rew={saturnRewards.ten}
-                      // isAchieved={
-                      //   saturnUnlockRewardInfoList?.length === 10
-                      //     ? false
-                      //     : saturnUnlockRewardInfoList?.length >= 10
-                      //     ? true
-                      //     : false
-                      // }
-                      isAchieved={
-                        satReset
-                          ? false
-                          : saturnUnlockRewardInfoList?.length >= 10
-                          ? true
-                          : false
-                      }
+                      // Determine if the reward is achieved based on the length of unlocked rewards
+                      isAchieved={!satReset && saturnUnlockRewardInfoList?.length >= 10}
                     />
                   </div>
                   <div className="reward8">
                     <TourComponent
                       rew={saturnRewards.eight}
-                      // isAchieved={
-                      //   saturnUnlockRewardInfoList?.length === 10
-                      //     ? false
-                      //     : saturnUnlockRewardInfoList?.length >= 8
-                      //     ? true
-                      //     : false
-                      // }
-
-                      isAchieved={
-                        satReset
-                          ? false
-                          : saturnUnlockRewardInfoList?.length >= 8
-                          ? true
-                          : false
-                      }
+                      isAchieved={!satReset && saturnUnlockRewardInfoList?.length >= 8}
                     />
                   </div>
                   <div className="reward6">
                     <TourComponent
                       rew={saturnRewards.six}
-                      // isAchieved={
-                      //   saturnUnlockRewardInfoList?.length === 10
-                      //     ? false
-                      //     : saturnUnlockRewardInfoList?.length >= 6
-                      //     ? true
-                      //     : false
-                      // }
-
-                      isAchieved={
-                        satReset
-                          ? false
-                          : saturnUnlockRewardInfoList?.length >= 6
-                          ? true
-                          : false
-                      }
+                      isAchieved={!satReset && saturnUnlockRewardInfoList?.length >= 6}
                     />
                   </div>
                   <div className="reward4">
                     <TourComponent
                       rew={saturnRewards.four}
-                      // isAchieved={
-                      //   saturnUnlockRewardInfoList?.length === 10
-                      //     ? false
-                      //     : saturnUnlockRewardInfoList?.length >= 4
-                      //     ? true
-                      //     : false
-                      // }
-                      isAchieved={
-                        satReset
-                          ? false
-                          : saturnUnlockRewardInfoList?.length >= 4
-                          ? true
-                          : false
-                      }
+                      isAchieved={!satReset && saturnUnlockRewardInfoList?.length >= 4}
                     />
                   </div>
                   <div className="reward2">
                     <TourComponent
                       rew={saturnRewards.two}
-                      // isAchieved={
-                      //   saturnUnlockRewardInfoList?.length === 10
-                      //     ? false
-                      //     : saturnUnlockRewardInfoList?.length >= 2
-                      //     ? true
-                      //     : false
-                      // }
-
-                      isAchieved={
-                        satReset
-                          ? false
-                          : saturnUnlockRewardInfoList?.length >= 2
-                          ? true
-                          : false
-                      }
+                      isAchieved={!satReset && saturnUnlockRewardInfoList?.length >= 2}
                     />
                   </div>
                 </div>
+                {/* left reward code end */}
 
+                {/* right reward code begin */}
                 <div className="right-rewards">
+                  {/* Reward component for reward 9 */}
                   <div className="reward9">
                     <TourComponent
                       rew={saturnRewards.nine}
-                      // isAchieved={
-                      //   saturnUnlockRewardInfoList?.length === 10
-                      //     ? false
-                      //     : saturnUnlockRewardInfoList?.length >= 9
-                      //     ? true
-                      //     : false
-                      // }
-
-                      isAchieved={
-                        satReset
-                          ? false
-                          : saturnUnlockRewardInfoList?.length >= 9
-                          ? true
-                          : false
-                      }
+                      // Determine if the reward is achieved based on the length of unlocked rewards
+                      isAchieved={!satReset && saturnUnlockRewardInfoList?.length >= 9}
                     />
                   </div>
 
+                  {/* Reward component for reward 7 */}
                   <div className="reward7">
                     <TourComponent
                       rew={saturnRewards.seven}
-                      // isAchieved={
-                      //   saturnUnlockRewardInfoList?.length === 10
-                      //     ? false
-                      //     : saturnUnlockRewardInfoList?.length >= 7
-                      //     ? true
-                      //     : false
-                      // }
-
-                      isAchieved={
-                        satReset
-                          ? false
-                          : saturnUnlockRewardInfoList?.length >= 7
-                          ? true
-                          : false
-                      }
+                      // Determine if the reward is achieved based on the length of unlocked rewards
+                      isAchieved={!satReset && saturnUnlockRewardInfoList?.length >= 7}
                     />
                   </div>
 
+                  {/* Reward component for reward 5 */}
                   <div className="reward5">
                     <TourComponent
                       rew={saturnRewards.five}
-                      // isAchieved={
-                      //   saturnUnlockRewardInfoList?.length === 10
-                      //     ? false
-                      //     : saturnUnlockRewardInfoList?.length >= 5
-                      //     ? true
-                      //     : false
-                      // }
+                      // Determine if the reward is achieved based on the length of unlocked rewards
+                      isAchieved={!satReset && saturnUnlockRewardInfoList?.length >= 5}
 
-                      isAchieved={
-                        satReset
-                          ? false
-                          : saturnUnlockRewardInfoList?.length >= 5
-                          ? true
-                          : false
-                      }
                     />
                   </div>
+
+                  {/* Reward component for reward 3 */}
                   <div className="reward3">
                     <TourComponent
                       rew={saturnRewards.three}
-                      // isAchieved={
-                      //   saturnUnlockRewardInfoList?.length === 10
-                      //     ? false
-                      //     : saturnUnlockRewardInfoList?.length >= 3
-                      //     ? true
-                      //     : false
-                      // }
-                      isAchieved={
-                        satReset
-                          ? false
-                          : saturnUnlockRewardInfoList?.length >= 3
-                          ? true
-                          : false
-                      }
+                      // Determine if the reward is achieved based on the length of unlocked rewards
+                      isAchieved={!satReset && saturnUnlockRewardInfoList?.length >= 3}
                     />
                   </div>
 
+                  {/* Reward component for reward 1 */}
                   <div className="reward1">
                     <TourComponent
                       rew={saturnRewards.one}
-                      // isAchieved={
-                      //   saturnUnlockRewardInfoList?.length === 10
-                      //     ? false
-                      //     : saturnUnlockRewardInfoList?.length >= 1
-                      //     ? true
-                      //     : false
-                      // }
-
-                      isAchieved={
-                        satReset
-                          ? false
-                          : saturnUnlockRewardInfoList?.length >= 1
-                          ? true
-                          : false
-                      }
+                      // Determine if the reward is achieved based on the length of unlocked rewards
+                      isAchieved={!satReset && saturnUnlockRewardInfoList?.length >= 1}
                     />
                   </div>
                 </div>
+                {/* right reward code end */}
 
                 <img src={pathFromRight} className="path1" />
                 <img src={pathFromLeft} className="path2" />
@@ -478,70 +360,62 @@ const TalentTour = () => {
 
               <div className="bottom-sec">
                 <button
-                  // className={`travel-btn ${
-                  //   isDisabled || !infoCalled ? "blackNWhite" : ""
-                  // }`}
-                  // onClick={isDisabled || !infoCalled ? () => {} : playGame}
-                  // disabled={isPlaying || isDisabled || !infoCalled}
-                  className={`travel-btn ${
-                    !infoCalled
-                      ? "blackNWhite"
-                      : isDisabled
+                  className={`travel-btn ${!infoCalled
+                    ? "blackNWhite"
+                    : isDisabled
                       ? "blackNWhite"
                       : ""
-                  }`}
-                  onClick={!infoCalled ? () => {} : isDisabled ? {} : playGame}
+                    }`}
+                  onClick={!infoCalled ? () => { } : isDisabled ? {} : playGame}
                   disabled={!infoCalled ? true : isDisabled ? true : false}
                 />
                 <img
-                  className={`moving-ship ${
-                    currentPos === 0
-                      ? "zeroPos"
-                      : currentPos === 1
+                  className={`moving-ship ${currentPos === 0
+                    ? "zeroPos"
+                    : currentPos === 1
                       ? "onePos "
                       : currentPos === 2
-                      ? "twoPos "
-                      : currentPos === 3
-                      ? "threePos "
-                      : currentPos === 4
-                      ? "fourPos "
-                      : currentPos === 5
-                      ? "fivePos "
-                      : currentPos === 6
-                      ? "sixPos "
-                      : currentPos === 7
-                      ? "sevenPos "
-                      : currentPos === 8
-                      ? "eightPos "
-                      : currentPos === 9
-                      ? "ninePos "
-                      : currentPos === 10
-                      ? "tenPos "
-                      : ""
-                  }
-                ${
-                  destination === 1 && isPlaying
-                    ? "from0To1"
-                    : destination === 2 && isPlaying
-                    ? "from1To2"
-                    : destination === 3 && isPlaying
-                    ? "from2To3"
-                    : destination === 4 && isPlaying
-                    ? "from3To4"
-                    : destination === 5 && isPlaying
-                    ? "from4To5"
-                    : destination === 6 && isPlaying
-                    ? "from5To6"
-                    : destination === 7 && isPlaying
-                    ? "from6To7"
-                    : destination === 8 && isPlaying
-                    ? "from7To8"
-                    : destination === 9 && isPlaying
-                    ? "from8To9"
-                    : destination === 10 && isPlaying
-                    ? "from9To10"
-                    : ""
-                }
+                        ? "twoPos "
+                        : currentPos === 3
+                          ? "threePos "
+                          : currentPos === 4
+                            ? "fourPos "
+                            : currentPos === 5
+                              ? "fivePos "
+                              : currentPos === 6
+                                ? "sixPos "
+                                : currentPos === 7
+                                  ? "sevenPos "
+                                  : currentPos === 8
+                                    ? "eightPos "
+                                    : currentPos === 9
+                                      ? "ninePos "
+                                      : currentPos === 10
+                                        ? "tenPos "
+                                        : ""
+                    }
+                ${destination === 1 && isPlaying
+                      ? "from0To1"
+                      : destination === 2 && isPlaying
+                        ? "from1To2"
+                        : destination === 3 && isPlaying
+                          ? "from2To3"
+                          : destination === 4 && isPlaying
+                            ? "from3To4"
+                            : destination === 5 && isPlaying
+                              ? "from4To5"
+                              : destination === 6 && isPlaying
+                                ? "from5To6"
+                                : destination === 7 && isPlaying
+                                  ? "from6To7"
+                                  : destination === 8 && isPlaying
+                                    ? "from7To8"
+                                    : destination === 9 && isPlaying
+                                      ? "from8To9"
+                                      : destination === 10 && isPlaying
+                                        ? "from9To10"
+                                        : ""
+                    }
                 
                 
                 
@@ -562,99 +436,60 @@ const TalentTour = () => {
                   <div className="reward10">
                     <TourComponent
                       rew={neptuneRewards.ten}
-                      // isAchieved={
-                      //   neptuneUnlockRewardInfoList?.length === 10
-                      //     ? false
-                      //     : neptuneUnlockRewardInfoList?.length >= 10
-                      //     ? true
-                      //     : false
-                      // }
                       isAchieved={
                         nepREset
                           ? false
                           : neptuneUnlockRewardInfoList?.length >= 10
-                          ? true
-                          : false
+                            ? true
+                            : false
                       }
                     />
                   </div>
                   <div className="reward8">
                     <TourComponent
                       rew={neptuneRewards.eight}
-                      // isAchieved={
-                      //   neptuneUnlockRewardInfoList?.length === 10
-                      //     ? false
-                      //     : neptuneUnlockRewardInfoList?.length >= 8
-                      //     ? true
-                      //     : false
-                      // }
-
                       isAchieved={
                         nepREset
                           ? false
                           : neptuneUnlockRewardInfoList?.length >= 8
-                          ? true
-                          : false
+                            ? true
+                            : false
                       }
                     />
                   </div>
                   <div className="reward6">
                     <TourComponent
                       rew={neptuneRewards.six}
-                      // isAchieved={
-                      //   neptuneUnlockRewardInfoList?.length === 10
-                      //     ? false
-                      //     : neptuneUnlockRewardInfoList?.length >= 6
-                      //     ? true
-                      //     : false
-                      // }
-
                       isAchieved={
                         nepREset
                           ? false
                           : neptuneUnlockRewardInfoList?.length >= 6
-                          ? true
-                          : false
+                            ? true
+                            : false
                       }
                     />
                   </div>
                   <div className="reward4">
                     <TourComponent
                       rew={neptuneRewards.four}
-                      // isAchieved={
-                      //   neptuneUnlockRewardInfoList?.length === 10
-                      //     ? false
-                      //     : neptuneUnlockRewardInfoList?.length >= 4
-                      //     ? true
-                      //     : false
-                      // }
-
                       isAchieved={
                         nepREset
                           ? false
                           : neptuneUnlockRewardInfoList?.length >= 4
-                          ? true
-                          : false
+                            ? true
+                            : false
                       }
                     />
                   </div>
                   <div className="reward2">
                     <TourComponent
                       rew={neptuneRewards.two}
-                      // isAchieved={
-                      //   neptuneUnlockRewardInfoList?.length === 10
-                      //     ? false
-                      //     : neptuneUnlockRewardInfoList?.length >= 2
-                      //     ? true
-                      //     : false
-                      // }
-
                       isAchieved={
                         nepREset
                           ? false
                           : neptuneUnlockRewardInfoList?.length >= 2
-                          ? true
-                          : false
+                            ? true
+                            : false
                       }
                     />
                   </div>
@@ -664,20 +499,12 @@ const TalentTour = () => {
                   <div className="reward9">
                     <TourComponent
                       rew={neptuneRewards.nine}
-                      // isAchieved={
-                      //   neptuneUnlockRewardInfoList?.length === 10
-                      //     ? false
-                      //     : neptuneUnlockRewardInfoList?.length >= 9
-                      //     ? true
-                      //     : false
-                      // }
-
                       isAchieved={
                         nepREset
                           ? false
                           : neptuneUnlockRewardInfoList?.length >= 9
-                          ? true
-                          : false
+                            ? true
+                            : false
                       }
                     />
                   </div>
@@ -685,20 +512,12 @@ const TalentTour = () => {
                   <div className="reward7">
                     <TourComponent
                       rew={neptuneRewards.seven}
-                      // isAchieved={
-                      //   neptuneUnlockRewardInfoList?.length === 10
-                      //     ? false
-                      //     : neptuneUnlockRewardInfoList?.length >= 7
-                      //     ? true
-                      //     : false
-                      // }
-
                       isAchieved={
                         nepREset
                           ? false
                           : neptuneUnlockRewardInfoList?.length >= 7
-                          ? true
-                          : false
+                            ? true
+                            : false
                       }
                     />
                   </div>
@@ -706,40 +525,24 @@ const TalentTour = () => {
                   <div className="reward5">
                     <TourComponent
                       rew={neptuneRewards.five}
-                      // isAchieved={
-                      //   neptuneUnlockRewardInfoList?.length === 10
-                      //     ? false
-                      //     : neptuneUnlockRewardInfoList?.length >= 5
-                      //     ? true
-                      //     : false
-                      // }
-
                       isAchieved={
                         nepREset
                           ? false
                           : neptuneUnlockRewardInfoList?.length >= 5
-                          ? true
-                          : false
+                            ? true
+                            : false
                       }
                     />
                   </div>
                   <div className="reward3">
                     <TourComponent
                       rew={neptuneRewards.three}
-                      // isAchieved={
-                      //   neptuneUnlockRewardInfoList?.length === 10
-                      //     ? false
-                      //     : neptuneUnlockRewardInfoList?.length >= 3
-                      //     ? true
-                      //     : false
-                      // }
-
                       isAchieved={
                         nepREset
                           ? false
                           : neptuneUnlockRewardInfoList?.length >= 3
-                          ? true
-                          : false
+                            ? true
+                            : false
                       }
                     />
                   </div>
@@ -747,20 +550,12 @@ const TalentTour = () => {
                   <div className="reward1">
                     <TourComponent
                       rew={neptuneRewards.one}
-                      // isAchieved={
-                      //   neptuneUnlockRewardInfoList?.length === 10
-                      //     ? false
-                      //     : neptuneUnlockRewardInfoList?.length >= 1
-                      //     ? true
-                      //     : false
-                      // }
-
                       isAchieved={
                         nepREset
                           ? false
                           : neptuneUnlockRewardInfoList?.length >= 1
-                          ? true
-                          : false
+                            ? true
+                            : false
                       }
                     />
                   </div>
@@ -779,81 +574,64 @@ const TalentTour = () => {
 
               <div className="bottom-sec">
                 <button
-                  // className={`travel-btn ${
-                  //   isDisabled || infoCalled === false ? "blackNWhite" : ""
-                  // }`}
-
-                  // onClick={
-                  //   isDisabled || infoCalled === false ? () => {} : playGame
-                  // }
-                  // disabled={isPlaying || isDisabled || infoCalled === false}
-
-                  className={`travel-btn ${
-                    !infoCalled
-                      ? "blackNWhite"
-                      : isDisabled
+                  className={`travel-btn ${!infoCalled
+                    ? "blackNWhite"
+                    : isDisabled
                       ? "blackNWhite"
                       : ""
-                  }`}
-                  onClick={!infoCalled ? () => {} : isDisabled ? {} : playGame}
+                    }`}
+                  onClick={!infoCalled ? () => { } : isDisabled ? {} : playGame}
                   disabled={!infoCalled ? true : isDisabled ? true : false}
                 />
                 <img
-                  className={`moving-ship-nep ${
-                    currentPosNep === 0
-                      ? "zeroPos"
-                      : currentPosNep === 1
+                  className={`moving-ship-nep ${currentPosNep === 0
+                    ? "zeroPos"
+                    : currentPosNep === 1
                       ? "onePos "
                       : currentPosNep === 2
-                      ? "twoPos "
-                      : currentPosNep === 3
-                      ? "threePos "
-                      : currentPosNep === 4
-                      ? "fourPos "
-                      : currentPosNep === 5
-                      ? "fivePos "
-                      : currentPosNep === 6
-                      ? "sixPos "
-                      : currentPosNep === 7
-                      ? "sevenPos "
-                      : currentPosNep === 8
-                      ? "eightPos "
-                      : currentPosNep === 9
-                      ? "ninePos "
-                      : currentPosNep === 10
-                      ? "tenPos "
-                      : ""
-                  }
-                      ${
-                        nepDestination === 1 && isPlaying
-                          ? "nepfrom0To1"
-                          : nepDestination === 2 && isPlaying
-                          ? "nepfrom1To2"
-                          : nepDestination === 3 && isPlaying
+                        ? "twoPos "
+                        : currentPosNep === 3
+                          ? "threePos "
+                          : currentPosNep === 4
+                            ? "fourPos "
+                            : currentPosNep === 5
+                              ? "fivePos "
+                              : currentPosNep === 6
+                                ? "sixPos "
+                                : currentPosNep === 7
+                                  ? "sevenPos "
+                                  : currentPosNep === 8
+                                    ? "eightPos "
+                                    : currentPosNep === 9
+                                      ? "ninePos "
+                                      : currentPosNep === 10
+                                        ? "tenPos "
+                                        : ""
+                    }
+                      ${nepDestination === 1 && isPlaying
+                      ? "nepfrom0To1"
+                      : nepDestination === 2 && isPlaying
+                        ? "nepfrom1To2"
+                        : nepDestination === 3 && isPlaying
                           ? "nepfrom2To3"
                           : nepDestination === 4 && isPlaying
-                          ? "nepfrom3To4"
-                          : nepDestination === 5 && isPlaying
-                          ? "nepfrom4To5"
-                          : nepDestination === 6 && isPlaying
-                          ? "nepfrom5To6"
-                          : nepDestination === 7 && isPlaying
-                          ? "nepfrom6To7"
-                          : nepDestination === 8 && isPlaying
-                          ? "nepfrom7To8"
-                          : nepDestination === 9 && isPlaying
-                          ? "nepfrom8To9"
-                          : nepDestination === 10 && isPlaying
-                          ? "nepfrom9To10"
-                          : "zeroDes"
-                      }
-                      
-                      
-                      
-                      `}
+                            ? "nepfrom3To4"
+                            : nepDestination === 5 && isPlaying
+                              ? "nepfrom4To5"
+                              : nepDestination === 6 && isPlaying
+                                ? "nepfrom5To6"
+                                : nepDestination === 7 && isPlaying
+                                  ? "nepfrom6To7"
+                                  : nepDestination === 8 && isPlaying
+                                    ? "nepfrom7To8"
+                                    : nepDestination === 9 && isPlaying
+                                      ? "nepfrom8To9"
+                                      : nepDestination === 10 && isPlaying
+                                        ? "nepfrom9To10"
+                                        : "zeroDes"
+                    }`}
                   src={ship}
                 />
-
                 <span>START</span>
               </div>
             </div>
