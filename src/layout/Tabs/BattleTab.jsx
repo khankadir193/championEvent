@@ -219,109 +219,109 @@ const BattleTab = () => {
     {
       inputValue <= 1
         ? fetch(
-            `${baseUrl}/api/activity/rps/rpsBattle?character=${selectedChar}`,
-            {
-              method: "POST",
-              headers: {
-                userId: user.userId,
-                token: user.token,
-                // userId: testUserId,
-                // token: testToken,
-                "Content-Type": "application/json",
-              },
-            }
-          )
-            .then((response) => response.json())
-            .then((response) => {
-              let rpsRes;
-              // debugger;
-              if (response.errorCode !== 0) {
-                setGameErrCode(response.errorCode);
-                setIsPlaying(false);
-                setGamePopUp(true);
-                setIsDisabled(false);
-                setErrorMsg(response?.msg);
-              } else {
-                rpsRes = response?.data?.rpsResult;
-
-                setRewardData(response?.data?.rewardContent);
-                setIsPlaying(true);
-                setGameMsg(response?.msg);
-                setTimeout(() => {
-                  // setIsPlaying(false);
-                  // setIsDisabled(false);
-                  setGameErrCode(response.errorCode);
-                  setRpsResult(rpsRes);
-                  // setGamePopUp(true);
-                  getInfo();
-                  getBattleLbData();
-
-                  getBattleRecords();
-
-                  setAnimFinished(true);
-                }, 3300);
-              }
-            })
-            .catch((error) => {
+          `${baseUrl}/api/activity/rps/rpsBattle?character=${selectedChar}`,
+          {
+            method: "POST",
+            headers: {
+              userId: user.userId,
+              token: user.token,
+              // userId: testUserId,
+              // token: testToken,
+              "Content-Type": "application/json",
+            },
+          }
+        )
+          .then((response) => response.json())
+          .then((response) => {
+            let rpsRes;
+            // debugger;
+            if (response.errorCode !== 0) {
+              setGameErrCode(response.errorCode);
               setIsPlaying(false);
-              setGamePopUp(false);
-            })
+              setGamePopUp(true);
+              setIsDisabled(false);
+              setErrorMsg(response?.msg);
+            } else {
+              rpsRes = response?.data?.rpsResult;
+
+              setRewardData(response?.data?.rewardContent);
+              setIsPlaying(true);
+              setGameMsg(response?.msg);
+              setTimeout(() => {
+                // setIsPlaying(false);
+                // setIsDisabled(false);
+                setGameErrCode(response.errorCode);
+                setRpsResult(rpsRes);
+                // setGamePopUp(true);
+                getInfo();
+                getBattleLbData();
+
+                getBattleRecords();
+
+                setAnimFinished(true);
+              }, 3300);
+            }
+          })
+          .catch((error) => {
+            setIsPlaying(false);
+            setGamePopUp(false);
+          })
         : fetch(
-            `${baseUrl}/api/activity/rps/rpsBattleMultiple?playCount=${inputValue}`,
-            {
-              method: "POST",
-              headers: {
-                userId: user.userId,
-                token: user.token,
-                // userId: testUserId,
-                // token: testToken,
-                "Content-Type": "application/json",
-              },
-            }
-          )
-            .then((response) => response.json())
-            .then((response) => {
-              let rpsRes;
-              // debugger;
-              if (response.errorCode !== 0) {
-                setGameErrCode(response.errorCode);
-                setIsPlaying(false);
-                setGamePopUp(true);
-                setIsDisabled(false);
-                setErrorMsg(response?.msg);
-                // setInputValue(1);
-              } else {
-                // rpsRes = response?.data?.rpsResult;
-
-                setRewardData(response?.data?.rewardContent);
-                setIsPlaying(true);
-                setGameMsg(response?.msg);
-                setWinCount(response?.data?.winCount);
-                setLostCount(response?.data?.lostCount);
-                setTieCount(response?.data?.tieCount);
-
-                setTimeout(() => {
-                  // setIsPlaying(false);
-                  // setIsDisabled(false);
-                  setGameErrCode(response.errorCode);
-                  // setRpsResult(rpsRes);
-                  // setGamePopUp(true);
-                  getInfo();
-                  getBattleLbData();
-
-                  getBattleRecords();
-
-                  setAnimFinished(true);
-                  // setInputValue(1);
-                }, 3300);
-              }
-            })
-            .catch((error) => {
-              console.error("Api error:", error.message);
+          `${baseUrl}/api/activity/rps/rpsBattleMultiple?playCount=${inputValue}`,
+          {
+            method: "POST",
+            headers: {
+              userId: user.userId,
+              token: user.token,
+              // userId: testUserId,
+              // token: testToken,
+              "Content-Type": "application/json",
+            },
+          }
+        )
+          .then((response) => response.json())
+          .then((response) => {
+            let rpsRes;
+            // debugger;
+            if (response.errorCode !== 0) {
+              setGameErrCode(response.errorCode);
               setIsPlaying(false);
-              setGamePopUp(false);
+              setGamePopUp(true);
+              setIsDisabled(false);
+              setErrorMsg(response?.msg);
               // setInputValue(1);
-            });
+            } else {
+              // rpsRes = response?.data?.rpsResult;
+
+              setRewardData(response?.data?.rewardContent);
+              setIsPlaying(true);
+              setGameMsg(response?.msg);
+              setWinCount(response?.data?.winCount);
+              setLostCount(response?.data?.lostCount);
+              setTieCount(response?.data?.tieCount);
+
+              setTimeout(() => {
+                // setIsPlaying(false);
+                // setIsDisabled(false);
+                setGameErrCode(response.errorCode);
+                // setRpsResult(rpsRes);
+                // setGamePopUp(true);
+                getInfo();
+                getBattleLbData();
+
+                getBattleRecords();
+
+                setAnimFinished(true);
+                // setInputValue(1);
+              }, 3300);
+            }
+          })
+          .catch((error) => {
+            console.error("Api error:", error.message);
+            setIsPlaying(false);
+            setGamePopUp(false);
+            // setInputValue(1);
+          });
     }
   };
 
@@ -379,13 +379,12 @@ const BattleTab = () => {
                       {item.userScore}{" "}
                       {`${item.userScore <= 1 ? "battle" : "battles"}`} and
                       ranked{" "}
-                      {`${
-                        item.ranking === 1
-                          ? "1st"
-                          : item.ranking === 2
+                      {`${item.ranking === 1
+                        ? "1st"
+                        : item.ranking === 2
                           ? "2nd"
                           : "3rd"
-                      }`}{" "}
+                        }`}{" "}
                       in RPS Battle game.
                     </p>
                   </div>
@@ -409,24 +408,34 @@ const BattleTab = () => {
         />
       </div>
 
+      {/* actual my game points begin from here */}
       <div className="battle-game-frame">
+        {/* Display user's game points */}
         <div className="battle-game-points-count d-flex j-center al-center">
           <img src={gamePoints} />
           <span>My Game Points : {info?.gamePoints}</span>
         </div>
+
         <div className="battle-game">
+          {/* Section for displaying the battle between user and opponent */}
           <div className="meVsOpp">
+            {/* User's mascot and frame */}
             <div className="mascot-withFrame">
-              <img src={userFrame} className="mascotFrame" />
-              <img src={mascotDp} className="mascot-dp" />
+              <img src={userFrame} className="mascotFrame" alt="Mascot Frame" />
+              <img src={mascotDp} className="mascot-dp" alt="Mascot Display Picture" />
             </div>
 
-            <img src={vsGif} className="vsGif" />
+            {/* Versus GIF */}
+            <img src={vsGif} className="vsGif" alt="Versus GIF" />
+
+            {/* Opponent's mascot and frame */}
             <div className="user-withFrame">
-              <img src={userFrame} className="userFrame" />
-              <img src={avatar ? avatar : unknown} className="user-dp" />
+              <img src={userFrame} className="userFrame" alt="Opponent Frame" />
+              <img src={avatar ? avatar : unknown} className="user-dp" alt="Opponent Display Picture" />
             </div>
           </div>
+
+          {/* Component for playing Rock-Paper-Scissors animation */}
           <SvgaPlayer
             src={rpsSvga}
             start={isPlaying}
@@ -434,11 +443,17 @@ const BattleTab = () => {
             lucky={resultImage ? true : false}
             animFinished={animFinished}
           />
-          {resultImage ? <img src={resultImage} className="result-img" /> : ""}
 
-          <img src={mascot} className="mascot-img" />
+          {/* Display the result image if available */}
+          {resultImage && <img src={resultImage} className="result-img" alt="Result Image" />}
+
+          {/* Display mascot image */}
+          <img src={mascot} className="mascot-img" alt="Mascot Image" />
+
+          {/* Placeholder for extra content */}
           <div id="extraContent"></div>
         </div>
+
 
         <div className="play-btns">
           <RadioButton
@@ -448,12 +463,18 @@ const BattleTab = () => {
               { pic: scissor, name: "Scissor" },
             ]}
             handleRadioSelect={
-              isPlaying || isDisabled ? () => {} : handleRadioSelect
+              // Conditionally assign the onClick handler:
+              // If 'isPlaying' is true or 'isDisabled' is true, assign an empty function (no action taken)
+              // Otherwise, assign the 'handleRadioSelect' function as the onClick handler
+              isPlaying || isDisabled ? () => { } : handleRadioSelect
             }
+
             selectedChar={selectedChar}
             disabled={isPlaying || isDisabled}
           />
         </div>
+
+        {/* Input section for battle game */}
         <div className="input-sec">
           <input
             className="battle-input"
@@ -469,42 +490,53 @@ const BattleTab = () => {
           <span className="input-info">Max value = 99</span>
           <button className="x1">x1</button>
         </div>
+
+        {/* Play button for battle game */}
         <button
-          className={`play-btn ${
-            isDisabled ? "blackNWhite" : !inputValue ? "blackNWhite" : ""
-          }`}
-          onClick={isDisabled || isPlaying || !inputValue ? () => {} : playGame}
+          className={`play-btn ${isDisabled ? "blackNWhite" : !inputValue ? "blackNWhite" : ""}`}
+          onClick={isDisabled || isPlaying || !inputValue ? () => { } : playGame}
           disabled={isPlaying || isDisabled}
         />
+
+        {/* Display points required text */}
         <span className="points-text">15K Pts Req</span>
+
+
+        {/* Display battles won count */}
         <div
           className="battles-won-count d-flex j-center al-center"
-          style={{ filter: !info?.battlesCount ? "grayScale(1)" : "" }}
-        >
-          <img src={battleWon} />
+          style={{ filter: !info?.battlesCount ? "grayScale(1)" : "" }}>
+          <img src={battleWon} alt="Battles Won Icon" />
           <span>Battles Won : {info?.battlesCount}</span>
         </div>
       </div>
+      {/* here end the my game points code */}
 
+      {/* here start the reward section code */}
       <div className="battle-rewards-sec">
-        <img src={rewardsHeading} className="rewards-heading" />
+        {/* Rewards heading */}
+        <img src={rewardsHeading} className="rewards-heading" alt="Rewards Heading" />
+
+        {/* Slider for displaying rewards */}
         <div style={{ position: "absolute", top: "7vw", left: "8vw" }}>
           <Slider rewards={rewards} showRanks={true} showIndicators={true} />
         </div>
 
+        {/* Beans pot section */}
         <div className="beansPot">
-          <img src={beansPotHeading} className="beans-pot-heading" />
-          <img className="pot-img" src={potImg} />
+          {/* Beans pot heading */}
+          <img src={beansPotHeading} className="beans-pot-heading" alt="Beans Pot Heading" />
+
+          {/* Beans pot image */}
+          <img className="pot-img" src={potImg} alt="Beans Pot" />
         </div>
 
+        {/* Beans pot count */}
         <div className="beans-pot-count d-flex j-center al-center">
-          <img src={beanIcon} />
-          {/* {dateStr && Object.keys(potInfo) ? (
-            <span>{potInfo[dateStr]}</span>
-          ) : (
-            ""
-          )} */}
+          {/* Bean icon */}
+          <img src={beanIcon} alt="Bean Icon" />
 
+          {/* Display beans count */}
           {dateStr && potInfo && Object.keys(potInfo) ? (
             <span>{potInfo[dateStr]}</span>
           ) : (
@@ -512,6 +544,8 @@ const BattleTab = () => {
           )}
         </div>
       </div>
+      {/* end the reward section code */}
+
       <LeaderBoardComponent data={[battle, battlePrev]} showEstRewards={true} />
       {details && <BattleDetails clickHandler={toggleDetails} />}
       {records && <BattleRecords clickHandler={toggleRecords} />}
