@@ -84,8 +84,8 @@ const EventGifting = ({ popUpHandler }) => {
 
       <LeaderBoardComponent
         isPopup={true}
-        data={[giftingLbData?.talent, giftingLbData?.user]}
-        // data={userOverallData}
+        // data={[giftingLbData?.talent, giftingLbData?.user]}
+        data={userOverallData}
         isGifting={true}
       />
     </div>

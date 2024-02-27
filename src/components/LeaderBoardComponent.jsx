@@ -78,7 +78,7 @@ const LeaderBoardComponent = ({ isPopup, data, isGifting, showEstRewards }) => {
       }
     } else {
       if (giftingLbTabs.talent) {
-        setSelectedData(data[0]);
+        setSelectedData(data);
       } else {
         setSelectedData(data[1]);
       }
