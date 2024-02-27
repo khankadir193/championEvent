@@ -278,6 +278,7 @@ export const DataProvider = ({ children }) => {
     fetch(`${baseUrl}/api/activity/rps/getWinnerInfo`)
       .then((response) =>
         response.json().then((response) => {
+          console.log('getLastLuckyWinnersInfo....??',response);
           // debugger;
           setLastLuckyWinners(response?.data || []);
           // setLastLuckyWinners(userOverallData);
@@ -295,6 +296,7 @@ export const DataProvider = ({ children }) => {
     )
       .then((response) =>
         response.json().then((response) => {
+          console.log('contextApi..ResponseData...',response);
           setTalentTourLbData(response?.data?.list || []);
           // setTalentTourLbData(userOverallData);
         })

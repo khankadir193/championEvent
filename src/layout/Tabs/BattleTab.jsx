@@ -35,6 +35,8 @@ import Slider from "../../components/Slider";
 import BattleRecords from "../Popups/BattleRecords";
 import { AppContext } from "../../AppContext";
 import mascot from "../../assets/images/battle/game-mascot.png";
+import { userOverallData } from "../../testData";
+
 
 import {
   baseUrl,
@@ -546,7 +548,7 @@ const BattleTab = () => {
       </div>
       {/* end the reward section code */}
 
-      <LeaderBoardComponent data={[battle, battlePrev]} showEstRewards={true} />
+      <LeaderBoardComponent data={userOverallData} showEstRewards={true} />
       {details && <BattleDetails clickHandler={toggleDetails} />}
       {records && <BattleRecords clickHandler={toggleRecords} />}
 

@@ -3,7 +3,7 @@ import "../styles/leaderboardcomp.scss";
 import title from "../assets/images/battle/lb-title.png";
 import TabButton from "./TabButton";
 import Topper from "./Topper";
-import { userOverallData } from "../testData";
+import { userOverallData,prevDayData } from "../testData";
 import GameLeaderboartItem from "./GameLbItem";
 import CommonButton from "./CommonButton";
 import { userOverallPot } from "../constants";
@@ -71,16 +71,18 @@ const LeaderBoardComponent = ({ isPopup, data, isGifting, showEstRewards }) => {
 
   useEffect(() => {
     if (!isGifting) {
+      //this condition is  working based on day.
       if (lbTabs.today) {
-        setSelectedData(data[0]);
+        setSelectedData(data);
       } else {
-        setSelectedData(data[1]);
+        setSelectedData(prevDayData);
       }
     } else {
+      //this condition is working based event giffting  
       if (giftingLbTabs.talent) {
         setSelectedData(data);
       } else {
-        setSelectedData(data[1]);
+        setSelectedData(data);
       }
     }
   }, [lbTabs, data, giftingLbTabs]);
