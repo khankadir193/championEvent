@@ -4,6 +4,7 @@
   background-size: cover;
   padding-bottom: 4vw;
 
+  /* Guide and Gifting section */
   .guideNGifting {
     top: 87vw;
     position: fixed;
@@ -11,6 +12,7 @@
     z-index: 3;
   }
 
+  /* Main tabs */
   .main-tabs {
     width: 90%;
     height: 10vw;
@@ -24,6 +26,7 @@
     top: 6vw;
     z-index: 2;
 
+    /* Main tab button */
     .main-tab-button {
       background-image: url("./assets/images/battle/active-tab.png");
 
@@ -40,6 +43,7 @@
       // left: -3vw;
     }
   }
+  /* Guide button wrapper */
   .guide-btn-wrap {
     width: 22vw;
     position: fixed;
@@ -47,6 +51,7 @@
     top: 80vw;
     z-index: 3;
   }
+  /* Event gifting wrapper */
   .event-gifting-wrap {
     width: 22vw;
     position: fixed;

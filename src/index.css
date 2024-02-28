@@ -105,6 +105,7 @@ button {
 }
 .event-gifting-btn {
   background-image: url("./assets/images/battle/event-gifting-btn.png");
+  /* width: 100%; */
 }
 .playBtn {
   background-image: url("../src/assets/images/battle/play-btn.png");

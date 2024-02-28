@@ -20,10 +20,12 @@ const CommonButton = ({
 
   return (
     <button
-      className={`common-button ${btnImg}`}
+      className={`common-button`}
       style={{ width: width, height: height }}
       onClick={handleClick} // Conditionally attach handleClick based on seeMore prop
-    ></button>
+    >
+      <img src={btnImg} className="dynamicBtn" />
+    </button>
   );
 };
 

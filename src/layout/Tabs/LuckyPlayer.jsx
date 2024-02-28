@@ -27,6 +27,11 @@ import starsSvga from "../../assets/animations/rps-ticket-stars.svga";
 import SvgaPlayer from "../../components/SvgaPlayer";
 import scratchWinText from "../../assets/images/lucky/scratch-win-text.png";
 import StarsSvga from "../../components/StarsSvga";
+import detailsButton from '../../assets/images/battle/detail-btn.png';
+import seeMoreBtn from '../../assets/images/battle/see-more-btn.png';
+import seeLessBtn from '../../assets/images/battle/see-less.png';
+
+
 const LuckyPlayer = () => {
   const {
     info,
@@ -208,7 +213,7 @@ const LuckyPlayer = () => {
     <div className="lucky-player">
       <div className="player-details-btn">
         <CommonButton
-          btnImg={"details"}
+          btnImg={detailsButton}
           width={"21vw"}
           handleClick={toggleDetails}
         />
@@ -453,7 +458,7 @@ const LuckyPlayer = () => {
             {lastLuckyWinners?.length > 10 ? (
               <div className="seeMore">
                 <CommonButton
-                  btnImg={seeMore ? "see-more" : "see-less"}
+                  btnImg={seeMore ? seeMoreBtn : seeLessBtn}
                   seeMore={true}
                   handleClick={toggleSeeMore}
                 />

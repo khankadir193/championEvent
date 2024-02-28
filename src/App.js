@@ -9,6 +9,9 @@ import ScrollToTopButton from "./components/ScrollToTopButton";
 import EventGifting from "./layout/Popups/EventGifting";
 import Guide from "./layout/Popups/Guide";
 import { AppContext } from "./AppContext";
+import giftImage from './assets/images/battle/event-gifting-btn.png'
+import guidImage from './assets/images/battle/guide-btn.png'
+
 
 function App() {
   const { disableAll } = useContext(AppContext);
@@ -43,7 +46,7 @@ function App() {
         {/* Render the first CommonButton component for the guide */}
         <div className="guide-btn-wrap">
           <CommonButton
-            btnImg="guide" // Specify the btnImg prop for the guide button
+            btnImg={guidImage} // Specify the btnImg prop for the guide button
             width="21vw" // Set the width of the button
             handleClick={toggleGuide} // Pass the toggleGuide function as the handleClick prop
           />
@@ -52,7 +55,7 @@ function App() {
         {/* Render the second CommonButton component for event gifting */}
         <div className="event-gifting-wrap">
           <CommonButton
-            btnImg="event-gifting-btn" // Specify the btnImg prop for the event gifting button
+            btnImg={giftImage} // Specify the btnImg prop for the event gifting button
             width="27vw" // Set the width of the button
             handleClick={toggleEventGifitng} // Pass the toggleEventGifitng function as the handleClick prop
           />
